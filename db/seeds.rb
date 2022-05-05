@@ -5,3 +5,21 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+require 'faker'
+
+puts "🌱 Seeding start!"
+
+50.times do
+    User.create(
+        name: Faker::Name.name,
+        email: Faker::Internet.email,
+        flappy_high_score: Faker::Number.between(from: 4, to: 15),
+        dodo_high_score: Faker::Number.between(from: 3, to: 15),
+        password_digest: "password"
+    )
+end
+
+
+
+puts "🌱 Seeding done!"
