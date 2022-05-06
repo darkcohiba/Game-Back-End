@@ -12,6 +12,9 @@ gem "sqlite3", "~> 1.4"
 #faker
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
 
+# Use Active Model has_secure_password
+gem 'bcrypt', '~> 3.1.7'
+
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
 
@@ -29,5 +32,6 @@ end
 group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+  gem 'foreman', '~> 0.87'
 end
 
