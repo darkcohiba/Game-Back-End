@@ -10,15 +10,13 @@ require 'faker'
 
 puts "🌱 Seeding start!"
 
-50.times do
-    User.create(
-        name: Faker::Name.name,
-        email: Faker::Internet.email,
-        flappy_high_score: Faker::Number.between(from: 4, to: 15),
-        dodo_high_score: Faker::Number.between(from: 3, to: 15),
-        password_digest: "password"
-    )
-end
+User.create(
+    name: Faker::Name.name,
+    email: Faker::Internet.email,
+    flappy_high_score: Faker::Number.between(from: 4, to: 15),
+    dodo_high_score: Faker::Number.between(from: 3, to: 15),
+    password_digest: "password"
+)
 
 
 
